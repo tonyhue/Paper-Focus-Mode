@@ -1,0 +1,24 @@
+{
+  "name": "Paper Focus Mode",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Stay in the zone on Paper.",
+  "homepage_url": "https://paper.dropbox.com/",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://paper.dropbox.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ],
+      "all_frames": true
+    }
+  ]
+}
